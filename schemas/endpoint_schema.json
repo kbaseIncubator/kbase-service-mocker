@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request",
+    "response"
+  ],
+  "properties": {
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "methods",
+        "path"
+      ],
+      "properties": {
+        "methods": {
+          "type": "array",
+          "default": [
+            "GET"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ]
+          }
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^\\/.*$"
+        },
+        "headers": {
+          "type": "object"
+        },
+        "absent_headers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "body": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "status": {
+          "type": "integer",
+          "default": 200,
+          "minimum": 100,
+          "maximum": 599
+        },
+        "headers": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

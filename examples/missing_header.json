@@ -1,0 +1,17 @@
+{
+  "request": {
+    "methods": [
+      "GET"
+    ],
+    "path": "/missing_header",
+    "absent_headers": [
+      "authorization"
+    ]
+  },
+  "response": {
+    "status": 403,
+    "body": {
+      "error": "missing authorization header"
+    }
+  }
+}

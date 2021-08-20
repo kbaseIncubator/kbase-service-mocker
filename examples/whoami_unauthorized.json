@@ -1,0 +1,17 @@
+{
+  "request": {
+    "methods": [
+      "GET"
+    ],
+    "path": "/whoami",
+    "headers": {
+      "Authorization": "Bearer invalid_user"
+    }
+  },
+  "response": {
+    "status": 403,
+    "body": {
+      "error": "Unauthorized"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "request": {
+    "methods": [
+      "POST"
+    ],
+    "path": "/non-json",
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "body": "hello=1&world=2"
+  },
+  "response": {
+    "body": "form submitted successfully"
+  }
+}

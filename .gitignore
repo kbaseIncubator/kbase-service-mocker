@@ -1,0 +1,6 @@
+# Environment variables
+# Development
+/venv/
+
+# IDEs
+.vscode

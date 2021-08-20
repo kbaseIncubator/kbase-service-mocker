@@ -1,0 +1,11 @@
+{
+  "request": {
+    "path": "/non-json",
+    "methods": [
+      "PUT"
+    ]
+  },
+  "response": {
+    "body": "not json"
+  }
+}
